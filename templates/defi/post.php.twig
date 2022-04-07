@@ -1,0 +1,22 @@
+{# templates/user/list.php.twig #}
+<!DOCTYPE html>
+<html lang="fr">
+    <body>
+        <h1>Les utilisateurs</h1>
+        <form method="_POST" action="" name="defi">
+
+        <ul>
+            {% for user in users %}
+            <li><button type="submit" name="defi" value="{{ path('user_item', { id: loop.index0 }) }}">{{ user.name }}</button></li>
+            {% endfor %}
+        </ul>
+
+        </form>
+
+        <?php
+        if(!isset($_POST["defi"])){
+            require "../../Controller/RoutingChallengeController.php";
+        }
+
+    </body>
+</html>

@@ -1,3 +1,19 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /index
+    controller: App\Controller\DefaultController::index
+
+# config/routes.yaml
+
+post_list:
+    path: /liste-des-articles
+    controller: App\Controller\PostController::item
+
+# config/routes.yaml
+
+user_list:
+    path: /utilisateurs
+    controller: App\Controller\UserController::list
+
+user_item:
+    path: /utilisateurs-{id}
+    controller: App\Controller\UserController::item

@@ -1,0 +1,10 @@
+{# templates/post/show.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ post.title }} | {{ parent() }}{% endblock %}
+
+{% block body %}
+    <a href="{{ path('post_index') }}">&laquo; Retour aux articles</a>
+
+    {% include 'post/_post_detail.html.twig' %}
+{% endblock %}
